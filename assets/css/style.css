@@ -366,19 +366,22 @@ a.thema {
   text-decoration: none;
   transition: transform .18s ease, box-shadow .18s ease;
 }
-a.thema:hover {
+a.thema:hover,
+a.thema:focus-visible {
   color: inherit;            /* alleen de kop verkleurt, niet de hele kaart */
-  transform: translateY(-4px);
-  box-shadow: 0 2px 4px rgba(70, 64, 63, .06), 0 14px 32px rgba(70, 64, 63, .12);
+  transform: translateY(-7px);
+  box-shadow: 0 3px 6px rgba(70, 64, 63, .08), 0 18px 38px rgba(70, 64, 63, .16);
 }
-a.thema:hover h3 { color: var(--roze-donker); }
+a.thema:hover h3,
+a.thema:focus-visible h3 { color: var(--roze-donker); }
 a.thema img { transition: transform .4s ease; }
-a.thema:hover img { transform: scale(1.03); }
+a.thema:hover img,
+a.thema:focus-visible img { transform: scale(1.04); }
 
 @media (prefers-reduced-motion: reduce) {
   a.thema, a.thema img { transition: none; }
-  a.thema:hover { transform: none; }
-  a.thema:hover img { transform: none; }
+  a.thema:hover, a.thema:focus-visible { transform: none; }
+  a.thema:hover img, a.thema:focus-visible img { transform: none; }
 }
 .thema img { width: 100%; aspect-ratio: 4 / 5; object-fit: cover; }
 .thema-tekst { padding: 22px 24px 26px; }

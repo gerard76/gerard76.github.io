@@ -136,3 +136,31 @@
 
   start();
 })();
+
+// Kom je binnen met een anker in de URL (bijvoorbeeld themas.html#textiel),
+// spring er dan zelf heen. Safari doet dat niet betrouwbaar zolang de inhoud
+// nog een animatie heeft en scroll-behavior op smooth staat; je blijft dan
+// bovenaan de pagina staan.
+(function () {
+  if (!location.hash) return;
+
+  var doel;
+  try { doel = document.querySelector(location.hash); } catch (e) { return; }
+  if (!doel) return;
+
+  function ernaartoe() {
+    var wortel = document.documentElement;
+    var vorige = wortel.style.scrollBehavior;
+    wortel.style.scrollBehavior = 'auto';   // ineens, niet zwevend
+    doel.scrollIntoView();                  // houdt rekening met scroll-margin-top
+    wortel.style.scrollBehavior = vorige;
+  }
+
+  ernaartoe();
+
+  // Mocht dat te vroeg zijn geweest: nog één keer als alles geladen is,
+  // maar alleen als de bezoeker nog bovenaan staat.
+  window.addEventListener('load', function () {
+    if (window.scrollY < 10) ernaartoe();
+  });
+})();
