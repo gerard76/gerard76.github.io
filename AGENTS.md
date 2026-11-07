@@ -9,7 +9,7 @@ Een paar dingen om te weten voordat je iets voorstelt:
 - **Losse HTML-bestanden, geen bouwstap.** Geen npm, geen framework, geen
   generator. Stel nooit voor om iets te installeren of om de site te
   "moderniseren" — dat is een bewuste keuze, geen achterstand.
-- **Mila onderhoudt deze site, en zij is geen programmeur.** Leg uit in gewoon
+- **Degene die deze site bijhoudt is geen programmeur.** Leg uit in gewoon
   Nederlands, zonder jargon. Geef hele regels of blokken om te plakken, geen
   losse fragmenten. Kan iets op github.com in de browser, leg het dan zo uit.
 - **Nederlands.** De site, de teksten, de bestandsnamen en de uitleg zijn
