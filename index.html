@@ -150,15 +150,30 @@
   </section>
 
   <!-- ====================================================================
-       SEIZOENSBLOK — dit stuk wisselt mee met het jaar.
+       SEIZOENSBLOK - dit stuk wisselt mee met het jaar. Nu staat het op kerst.
 
-       In het voorjaar aanpassen:
-       1. Verander de kop hieronder ("Nu in de winkel: kerst") en de tekst eronder.
-       2. Zet drie nieuwe foto's in assets/img/ en pas de drie <img>-regels aan:
-          de bestandsnaam, en de alt="..." (die beschrijft de foto voor wie
-          hem niet kan zien, en voor Google).
-       3. Wil je het blok tijdelijk weg? Knip dan de hele section hieronder uit
-          en bewaar hem in een apart bestand tot je hem weer nodig hebt.
+       DE FOTO'S VERVANGEN
+       De drie foto's heten altijd seizoen-1.webp, seizoen-2.webp en
+       seizoen-3.webp. Je verandert dus niets aan de regels hieronder: je
+       vervangt de bestanden zelf in assets/img/. Upload drie nieuwe foto's
+       met precies die namen, en de site staat in het nieuwe seizoen.
+       Staan de oude foto's er daarna nog? Wacht tien minuten en ververs de
+       pagina; je browser houdt ze even vast.
+
+       DE VOORRAADKAST
+       In assets/img/seizoenen/ bewaren we de oude sets. De kerstfoto's staan
+       daar als kerst-1.webp tot kerst-3.webp. Zet je iets nieuws in de winkel,
+       kopieer die foto's dan ook even daarheen onder een eigen naam
+       (voorjaar-1.webp enzovoort), dan kun je ze later zo terugzetten.
+
+       WAT JE HIERONDER WEL AANPAST
+       1. De kop ("Nu in de winkel: kerst") en het tekstje eronder.
+       2. De drie alt="..." teksten. Die beschrijven wat er op de foto staat,
+          voor mensen die hem niet kunnen zien en voor Google. Nieuwe foto's
+          betekent dus ook nieuwe beschrijvingen.
+
+       Wil je het blok een tijdje helemaal niet tonen? Knip dan de hele
+       section hieronder uit en bewaar hem in een los bestand.
        ==================================================================== -->
   <section class="sectie sectie--roze" id="seizoen">
     <div class="wrap">
@@ -171,17 +186,11 @@
       </div>
 
       <div class="seizoen">
-        <img src="assets/img/kerst-1-800.webp"
-             srcset="assets/img/kerst-1-480.webp 480w, assets/img/kerst-1-800.webp 800w"
-             sizes="(min-width: 900px) 340px, 92vw" width="800" height="1067" loading="lazy"
+        <img src="assets/img/seizoen-1.webp" loading="lazy"
              alt="Gedekte kersttafel met kaarsen, dennengroen en een beker met een kerstkabouter">
-        <img src="assets/img/kerst-2-800.webp"
-             srcset="assets/img/kerst-2-480.webp 480w, assets/img/kerst-2-800.webp 800w"
-             sizes="(min-width: 900px) 340px, 92vw" width="800" height="1067" loading="lazy"
+        <img src="assets/img/seizoen-2.webp" loading="lazy"
              alt="Decoratiebord met Merry Christmas erop, met twee rendieren met kerstmutsen ervoor">
-        <img src="assets/img/kerst-3-800.webp"
-             srcset="assets/img/kerst-3-480.webp 480w, assets/img/kerst-3-800.webp 800w"
-             sizes="(min-width: 900px) 340px, 92vw" width="800" height="1067" loading="lazy"
+        <img src="assets/img/seizoen-3.webp" loading="lazy"
              alt="Schap met rood-wit servies van Greengate: kommen, bekers en een theepot">
       </div>
     </div>
