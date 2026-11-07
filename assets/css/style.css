@@ -359,6 +359,27 @@ section[id] { scroll-margin-top: 92px; }   /* plakkende koptekst niet over de ti
   box-shadow: var(--schaduw);
   display: flex; flex-direction: column;
 }
+
+/* De kaarten op de homepagina zijn links naar het juiste stuk van "Wat je vindt". */
+a.thema {
+  color: inherit;
+  text-decoration: none;
+  transition: transform .18s ease, box-shadow .18s ease;
+}
+a.thema:hover {
+  color: inherit;            /* alleen de kop verkleurt, niet de hele kaart */
+  transform: translateY(-4px);
+  box-shadow: 0 2px 4px rgba(70, 64, 63, .06), 0 14px 32px rgba(70, 64, 63, .12);
+}
+a.thema:hover h3 { color: var(--roze-donker); }
+a.thema img { transition: transform .4s ease; }
+a.thema:hover img { transform: scale(1.03); }
+
+@media (prefers-reduced-motion: reduce) {
+  a.thema, a.thema img { transition: none; }
+  a.thema:hover { transform: none; }
+  a.thema:hover img { transform: none; }
+}
 .thema img { width: 100%; aspect-ratio: 4 / 5; object-fit: cover; }
 .thema-tekst { padding: 22px 24px 26px; }
 .thema h3 { margin-bottom: .4em; color: var(--groen-donker); font-family: var(--serif); }
@@ -383,6 +404,20 @@ section[id] { scroll-margin-top: 92px; }   /* plakkende koptekst niet over de ti
   box-shadow: var(--schaduw);
 }
 .duo-tekst > :last-child { margin-bottom: 0; }
+
+/* --- seizoensblok ----------------------------------------
+   Het blok op de homepagina dat met het jaar meewisselt.
+   --------------------------------------------------------- */
+.seizoen {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: clamp(16px, 2vw, 26px);
+}
+.seizoen img {
+  width: 100%; aspect-ratio: 3 / 4; object-fit: cover;
+  border-radius: var(--rand);
+  box-shadow: var(--schaduw);
+}
 
 /* --- fotostrip -------------------------------------------- */
 .strip {
